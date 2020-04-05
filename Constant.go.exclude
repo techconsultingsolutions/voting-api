@@ -1,0 +1,79 @@
+// This is entry point.
+package mainx
+
+import ( "fmt" )
+
+const pi = 3.14;
+
+const (
+	first = iota	
+	second 
+)
+
+const (
+	Employee = iota
+	Manager = iota
+)
+
+/*
+This is multiline
+comment.
+*/
+func mainx() {
+	fmt.Println("Declare variable in go!!!!");
+	fmt.Println(pi);
+
+	fmt.Println(first,second);
+
+	fmt.Println(Manager);
+
+	var arr [3]int;
+	arr2 := [3]int {1,2,3};
+	arr[0] = 1;
+	fmt.Println("value of array is");
+	fmt.Println(arr);
+
+	fmt.Println( arr2);
+
+	fmt.Println("Slice is built on top of array");
+
+	slice := arr2[:];
+	fmt.Println(slice);
+
+	slice = append(slice,10,20,30);
+
+	fmt.Println(slice);
+
+	sos := slice[2:4];
+	fmt.Println(sos);
+	 
+	//iota and constant blocks
+
+	m := map[string]int{"foo":1,"bar":2};
+	fmt.Println(m);
+
+	fmt.Println(m["foo"]);
+
+	delete(m,"foo");
+	fmt.Println(m);
+
+	type user struct {
+		ID int
+		FirstName string
+		LastName string
+	}
+
+	var u user;
+	u.ID = 1;
+	u.FirstName = "Hemant";
+	u.LastName = "Shelar";
+
+	uu := user {
+		ID: 1,
+		FirstName: "Arushi"	,
+		LastName: "Shelar",
+	};
+
+	fmt.Println(u);
+	fmt.Println(uu);
+}
