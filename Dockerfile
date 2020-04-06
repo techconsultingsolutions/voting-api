@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY . ./
 
-ENTRYPOINT ["/bin/bash"]
+CMD [ "go build ." ]
+
+ENTRYPOINT ["./voting-api"]
